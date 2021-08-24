@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 80rem;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+  padding-top: 2rem;
+  h2 {
+    color: white;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 700;
+  }
+}
+.searchbox_div {
+  .btn {
+    border-radius: 0.6em;
+    cursor: pointer;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    background-color: #f1c40f;
+    border: none;
+    outline: none;
+  }
+}
+.btn_grp {
+  .btn {
+    font-size: 0.6rem;
+  }
+}
+.bio_list {
+  margin: 2rem 1rem;
+}
+.repos_list {
+  margin: 4rem 1rem;
+
+  ul {
+    height: 10rem;
+    overflow: scroll;
+    li {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      padding: 1rem 0rem;
+      span {
+        position: relative;
+        margin-top: 0.5rem;
+        .btun {
+          font-size: 0.7rem;
+          margin: 0 0.3rem;
+          border: none;
+          padding: 0.2rem 0.4rem;
+          border-radius: 0.2rem;
+          color: white;
+        }
+        .b_1 {
+          background-color: orchid;
+        }
+        .b_2 {
+          background-color: goldenrod;
+        }
+        .b_3 {
+          background-color: gray;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 576px) {
+  .header {
+    position: relative;
+    height: 25vh;
+  }
+  .desktop_mod {
+    .searchbox_div {
+      img {
+        height: 50vh !important;
+      }
+    }
+    .bio_div {
+      .btn_grp {
+        .btn {
+          font-size: 1rem;
+        }
+      }
+      .bio_list {
+        margin: 2.5rem 0.5rem;
+      }
+    }
+  }
+  .repos_list {
+    ul {
+      li {
+        flex-direction: row;
+        a {
+          margin-left: 0.2rem;
+          min-width: 35vw;
+          word-break: break-all;
+        }
+        span {
+          margin-right: 0.2rem !important ;
+          .btun {
+            width: 16vw;
+            font-size: 0.8rem !important;
+            margin: 0 0.7rem !important;
+            padding: 0.2rem 0.6rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    h2 {
+      font-weight: 800;
+      font-size: 3rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+  }
+  .search_box {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    label {
+      font-size: 1.3rem;
+    }
+    input {
+      width: 50%;
+    }
+  }
+  .desktop_mod {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    .searchbox_div {
+      img {
+        height: 35vh !important;
+        margin-bottom: 2rem;
+      }
+    }
+    .bio_div {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      .btn_grp {
+        .btn {
+          margin-right: 2rem;
+        }
+      }
+      .bio_list {
+        margin-right: 2rem !important;
+        margin-bottom: 5rem;
+        ul {
+          li {
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .repos_list {
+    ul {
+      height: 40vh;
+      li {
+        a {
+          font-size: 1.3rem;
+          text-decoration: none;
+        }
+        span {
+          .btun {
+            margin: 0 2rem !important;
+            padding: 0.4rem 1rem !important;
+            width: 18vh;
+          }
+        }
+      }
+    }
+    ul::-webkit-scrollbar {
+      width: 8px; /* width of the entire scrollbar */
+    }
+
+    ul::-webkit-scrollbar-track {
+      background: transparent; /* color of the tracking area */
+    }
+
+    ul::-webkit-scrollbar-thumb {
+      background-color: blue;
+      /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
+    }
+  }
+}
