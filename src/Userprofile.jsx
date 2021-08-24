@@ -25,7 +25,7 @@ const Userprofile = () => {
         setRepo(repoData);
         //console.log(repoData);
         //console.log(repoData);
-        // console.log(userdata);
+        console.log(userdata);
       } catch (err) {
         console.log(err);
       }
@@ -44,6 +44,7 @@ const Userprofile = () => {
         <div className="container-fluid ">
           <label>Enter a username to fetch user info and repos</label>
           <input
+            autoComplete="off"
             type="text"
             name="searchterm"
             value={searchTerm}

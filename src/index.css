@@ -7,7 +7,7 @@
 
 body {
   width: 100%;
-  min-height: 80rem;
+  min-height: 87rem;
 }
 
 .header {
@@ -51,7 +51,7 @@ body {
 }
 
 .repos_list ul {
-  height: 10rem;
+  height: 40vh;
   overflow: scroll;
 }
 
@@ -100,7 +100,7 @@ body {
 @media (min-width: 576px) {
   .header {
     position: relative;
-    height: 25vh;
+    min-height: 25vh;
   }
   .desktop_mod .searchbox_div img {
     height: 50vh !important;
@@ -110,6 +110,9 @@ body {
   }
   .desktop_mod .bio_div .bio_list {
     margin: 2.5rem 0.5rem;
+  }
+  .repos_list ul {
+    height: 50vh;
   }
   .repos_list ul li {
     -webkit-box-orient: horizontal;
@@ -203,7 +206,7 @@ body {
     padding: 1rem;
   }
   .repos_list ul {
-    height: 40vh;
+    height: 50vh;
   }
   .repos_list ul li a {
     font-size: 1.3rem;

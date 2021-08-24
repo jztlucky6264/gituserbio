@@ -5,7 +5,7 @@
 }
 body {
   width: 100%;
-  min-height: 80rem;
+  min-height: 87rem;
 }
 .header {
   position: relative;
@@ -46,7 +46,7 @@ body {
   margin: 4rem 1rem;
 
   ul {
-    height: 10rem;
+    height: 40vh;
     overflow: scroll;
     li {
       display: flex;
@@ -81,7 +81,7 @@ body {
 @media (min-width: 576px) {
   .header {
     position: relative;
-    height: 25vh;
+    min-height: 25vh;
   }
   .desktop_mod {
     .searchbox_div {
@@ -102,6 +102,7 @@ body {
   }
   .repos_list {
     ul {
+      height: 50vh;
       li {
         flex-direction: row;
         a {
@@ -178,7 +179,7 @@ body {
   }
   .repos_list {
     ul {
-      height: 40vh;
+      height: 50vh;
       li {
         a {
           font-size: 1.3rem;
