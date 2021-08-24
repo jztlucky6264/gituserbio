@@ -6,6 +6,7 @@ const Header = () => {
       <header className="header bg-primary">
         <h2>Github Users Profile Finder</h2>
       </header>
+      <h1 className="text-center mt-3 mb-3">Search Github Users</h1>
     </>
   );
 };

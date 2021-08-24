@@ -22,6 +22,9 @@ body {
 h1 {
   position: relative;
 }
+.search_box {
+  position: relative;
+}
 .searchbox_div {
   position: relative;
   .btn {
@@ -90,7 +93,7 @@ h1 {
   .desktop_mod {
     .searchbox_div {
       img {
-        height: 50vh !important;
+        min-height: 50vh !important;
       }
     }
     .bio_div {

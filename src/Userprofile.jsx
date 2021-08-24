@@ -40,7 +40,6 @@ const Userprofile = () => {
   if (!userdata) {
     return (
       <>
-        <h1 className="text-center mt-3 mb-3">Search Github Users</h1>
         <div className="container-fluid ">
           <label>Enter a username to fetch user info and repos</label>
           <input
@@ -77,10 +76,10 @@ const Userprofile = () => {
 
   return (
     <>
-      <h1 className="text-center mt-3 mb-3">Search Github Users</h1>
       <div className="container-fluid search_box ">
         <label>Enter a username to fetch user info and repos</label>
         <input
+          autoComplete="off"
           type="text"
           name="searchterm"
           value={searchTerm}

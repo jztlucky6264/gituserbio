@@ -28,6 +28,10 @@ h1 {
   position: relative;
 }
 
+.search_box {
+  position: relative;
+}
+
 .searchbox_div {
   position: relative;
 }
@@ -111,7 +115,7 @@ h1 {
     min-height: 25vh;
   }
   .desktop_mod .searchbox_div img {
-    height: 50vh !important;
+    min-height: 50vh !important;
   }
   .desktop_mod .bio_div .btn_grp .btn {
     font-size: 1rem;
