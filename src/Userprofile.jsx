@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Userprofile = () => {
-  const [searchTerm, setSearchTerm] = useState("jzt");
+  const [searchTerm, setSearchTerm] = useState("bh");
   const [userdata, setUserData] = useState("");
   const [repo, setRepo] = useState([]);
 
