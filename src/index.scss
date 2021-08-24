@@ -19,7 +19,11 @@ body {
     font-weight: 700;
   }
 }
+h1 {
+  position: relative;
+}
 .searchbox_div {
+  position: relative;
   .btn {
     border-radius: 0.6em;
     cursor: pointer;
