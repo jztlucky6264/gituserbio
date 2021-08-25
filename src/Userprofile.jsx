@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
+import Input from "./Input";
+import Repository from "./Repository";
 
-const Userprofile = () => {
+const Userprofile = (props) => {
   const [searchTerm, setSearchTerm] = useState("bh");
   const [userdata, setUserData] = useState("");
   const [repo, setRepo] = useState([]);
 
-  const searchdata = (e) => {
-    setSearchTerm(e.target.value);
-    //console.log(e.target.value);
+  const searchHandler = (e) => {
+    setSearchTerm(e);
   };
 
   useEffect(() => {
@@ -17,77 +18,30 @@ const Userprofile = () => {
         let repository = await fetch(
           `https://api.github.com/users/${searchTerm}/repos`
         );
-
         let data = await res.json();
         let repoData = await repository.json();
         setUserData(data);
-        //console.log(searchTerm);
         setRepo(repoData);
-        //console.log(repoData);
-        //console.log(repoData);
-        //console.log(userdata);
       } catch (err) {
         console.log(err);
       }
     };
-
     return getUserBio();
   }, [searchTerm]);
-  //console.log(repo);
-
-  const date = new Date().getFullYear();
 
   if (!userdata) {
     return (
       <>
-        <div className="container-fluid ">
-          <label>Enter a username to fetch user info and repos</label>
-          <input
-            autocomplete="off"
-            type="text"
-            name="searchterm"
-            value={searchTerm}
-            onChange={searchdata}
-            className="form-control "
-            placeholder="User Name"
-          />
-        </div>
+        <Input search={searchTerm} searchdata={searchHandler} />
         <h1>Data is Loading</h1>
       </>
     );
   }
-  let listitem;
-  if (repo.length >= 0) {
-    listitem = repo.map((respo) => (
-      <li key={respo.id} className="list-group-item">
-        <a href={respo.html_url}>{respo.name}</a>
-        <span>
-          <button className=" btun b_1">
-            Watchers: {respo.watchers_count}
-          </button>
-          <button className="btun b_2">Stars: {respo.stargazers_count}</button>
-          <button className="btun b_3">Forks: {respo.forks_count}</button>
-        </span>
-      </li>
-    ));
-  } else {
-    listitem = <h1>Loading...</h1>;
-  }
 
   return (
     <>
-      <div className="container-fluid search_box ">
-        <label>Enter a username to fetch user info and repos</label>
-        <input
-          autoComplete="off"
-          type="text"
-          name="searchterm"
-          value={searchTerm}
-          onChange={searchdata}
-          className="form-control "
-          placeholder="User Name"
-        />
-      </div>
+      <Input search={searchTerm} searchdata={searchHandler} />
+
       <div className="desktop_mod">
         <div className=" searchbox_div mt-5 d-flex justify-content-around  align-items-center flex-column">
           <img
@@ -128,14 +82,7 @@ const Userprofile = () => {
           </div>
         </div>
       </div>
-      <div className="repos_list  ">
-        <h2 className="list-group-item active">All Repos</h2>
-        <ul className="list-group">{listitem}</ul>
-      </div>
-
-      <div className="mt-5">
-        <p className="text-center mt-5">© Copyright {date}</p>
-      </div>
+      <Repository repodata={repo} />
     </>
   );
 };
