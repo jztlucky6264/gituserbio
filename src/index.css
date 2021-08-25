@@ -149,6 +149,9 @@ h1 {
 }
 
 @media (min-width: 768px) {
+  .header {
+    min-height: 20vh !important;
+  }
   .header h2 {
     font-weight: 800;
     font-size: 3rem;
