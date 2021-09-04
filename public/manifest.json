@@ -1,5 +1,5 @@
 {
-  "short_name": "Mern Developer",
+  "short_name": "Github Users",
   "name": "Created By Lucky Yadav",
   "icons": [
     {
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#110F48",
-  "background_color": "#272848"
+  "theme_color": "#E63956",
+  "background_color": "#DFE4E3"
 }
