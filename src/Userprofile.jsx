@@ -3,6 +3,7 @@ import Input from "./Input";
 import Repository from "./Repository";
 
 const Userprofile = (props) => {
+  s;
   const [searchTerm, setSearchTerm] = useState("jztlucky6264");
   const [userdata, setUserData] = useState("");
   const [repo, setRepo] = useState([]);
